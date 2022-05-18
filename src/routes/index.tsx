@@ -2,18 +2,23 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Redirect from '@/utils/redirect'
 
-import Task from '@/pages/task'
+import Today from '@/pages/today'
+import Month from '@/pages/month'
 
 const routes: any = [
   {
-    path: 'task',
-    component: Task,
+    path: 'today',
+    component: Today,
+  },
+  {
+    path: 'month',
+    component: Month,
   },
 ]
 
 const Router = () => (
   <Routes>
-    <Route path="/" element={<Redirect to="/task" />}></Route>
+    <Route path="/" element={<Redirect to="/today" />}></Route>
     {routes.map((item: any) => {
       return (
         <Route

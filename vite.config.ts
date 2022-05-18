@@ -11,5 +11,9 @@ export default defineConfig(() => {
         '@': resolve(__dirname, 'src'),
       },
     },
+    server: {
+      port: 5000,
+      open: true, // 自动打开浏览器
+    },
   }
 })
